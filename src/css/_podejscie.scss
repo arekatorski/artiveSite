@@ -1,0 +1,193 @@
+// hero
+.hero-p{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../media/podjescie_hero.png");
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+
+    .hero-content{
+        margin: 0 auto;
+        max-width: 1700px;
+        width: 90%;
+
+        h1{
+            font-size: 52px;
+            margin-bottom: 12px;
+        }
+
+        .list{
+            margin-left: 38px;
+            display: flex;
+
+            ul{
+                margin-left: 42px;
+                transform: translateY(25px);
+                list-style: none;
+    
+                li{
+                    margin-bottom: 42px;
+                    position: relative;
+                    font-size: 45px;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 768px){
+            h1{
+                font-size: 40px;
+            }
+
+            .list{
+                margin-left: 5px;
+
+                ul{
+                    margin-left: 20px;
+                    
+                    li{
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// info
+.info{
+    overflow: hidden;
+    background: #fff;
+
+    .info-content{
+        margin: 191px auto;
+        max-width: 1472px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .item{
+            max-width: 726px;
+            width: 100%;
+            margin-bottom: 300px;
+            position: relative;
+            display: flex;
+
+            h3{
+                position: absolute;
+                transform-origin: 0 0;
+                transform: rotate(90deg);
+                font-size: 75px;
+                color: #fff;
+                text-transform: uppercase;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: #000;
+
+                &::after{
+                    top: 0;
+                    left: 0;
+                    position: absolute;
+                    content: '';
+                    width: 251px;
+                    height: 1px;
+                    background: #000;
+                }
+            }
+
+            p{
+                margin-left: 10px;
+                max-width: 650px;
+                width: 100%;
+                font-size: 25px;
+            }
+
+            &:nth-child(even){
+                justify-self: flex-end;
+                margin-left: auto;
+
+                h3{
+                    transform: translateX(726px) rotate(90deg);
+                }
+            }
+
+            @media only screen and (max-width: 768px){
+                margin-bottom: 250px !important;
+                flex-direction: column;
+
+                h3{
+                    position: static;
+                    transform: translateX(0px) rotate(0deg) !important;
+                    font-size: 10vw;
+                }
+
+                p{
+                    font-size: 21px;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    
+}
+
+// info-more
+.info-more{
+    width: 100%;
+
+    .info-more-content{
+        margin: 0 auto;
+        max-width: 1225px;
+        width: 90%;
+
+        h2{
+            margin-bottom: 50px;
+            font-size: 75px;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #000;
+        }
+
+        p{
+            font-size: 25px;
+            font-weight: 300;
+        }
+        
+        a{
+            color: #BB4090;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .slogan{
+            position: relative;
+            margin: 133px 0 116px; 
+            text-align: center;
+
+            &::before{
+                position: absolute;
+                content: '';
+                top: -22px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 251px;
+                height: 2px;
+                background: #000;
+            }
+        }
+
+        @media only screen and (max-width: 768px){
+            h2{
+                font-size: 10.1vw;
+            }
+
+            p{
+                font-size: 22px;
+            }
+        }
+    }
+}
